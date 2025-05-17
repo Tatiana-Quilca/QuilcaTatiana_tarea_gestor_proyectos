@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="0dp"
+        android:minHeight="700dp"
+        app:cardBackgroundColor="#F5F5F5"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Título y FAB en la misma línea -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mis Proyectos"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#2a3895" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabAddProyecto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Agregar Proyecto"
+                    app:srcCompat="@android:drawable/ic_input_add"
+                    app:backgroundTint="#2a3895"
+                    app:tint="@android:color/white"
+                    app:elevation="6dp"
+                    android:layout_marginStart="16dp" />
+
+            </LinearLayout>
+
+            <!-- Campo de búsqueda -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchViewProyectos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:queryHint="Buscar proyectos..."
+                app:iconifiedByDefault="false"
+                android:background="@drawable/search_background" />
+
+            <!-- ListView para mostrar proyectos -->
+            <ListView
+                android:id="@+id/lvProyectos"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:background="#FFFFFF"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="1dp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tvNoProyectos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No hay proyectos. Crea uno nuevo."
+                android:textSize="16sp"
+                android:textColor="#757575"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
+                android:visibility="visible" />
+
+            <!-- Botón Eliminar (opcional, lo dejaremos por ahora) -->
+            <Button
+                android:id="@+id/btnEliminarProyecto"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Eliminar Proyecto"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="#FF4444"
+                android:backgroundTint="@null"
+                android:elevation="4dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone" />
+
+            <!-- Botón de salida como ícono -->
+            <ImageButton
+                android:id="@+id/btnLogout"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:contentDescription="Cerrar Sesión"
+                android:tint="#2a3895"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

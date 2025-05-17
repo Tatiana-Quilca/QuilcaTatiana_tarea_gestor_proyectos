@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.QuilcaTatiana_tarea_proyectos" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Define the primary color as #2a3895 -->
+        <item name="colorPrimary">#2a3895</item>
+        <item name="colorPrimaryVariant">#1a2875</item> <!-- Un tono más oscuro para variantes -->
+        <item name="colorOnPrimary">@android:color/white</item> <!-- Color del texto sobre el fondo primario -->
+        <item name="colorAccent">#2a3895</item> <!-- Color de acento para otros elementos -->
+    </style>
+
+    <style name="Theme.QuilcaTatiana_tarea_proyectos" parent="Base.Theme.QuilcaTatiana_tarea_proyectos" />
+</resources>
